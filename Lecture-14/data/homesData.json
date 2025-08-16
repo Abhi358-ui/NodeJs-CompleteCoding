@@ -1,0 +1,27 @@
+[
+  
+  {
+    "houseName": "new home",
+    "price": "2000",
+    "location": "Bihar",
+    "ratting": "3",
+    "image": "https://media.gettyimages.com/id/1516933385/photo/3d-rendering-of-wooden-forest-house-surrounded-by-trees.jpg?s=612x612&w=gi&k=20&c=iFbL3PtcXHaNhA7uf_qi5jV1OB9E6TIuRloKG-cxZag=",
+    "id": "0.9706439043413992"
+  },
+  {
+    "houseName": "Lasila",
+    "price": "2900",
+    "location": "US",
+    "ratting": "3",
+    "image": "https://www.rollingstone.com/wp-content/uploads/2025/07/225956.jpg?w=1581&h=1054&crop=1",
+    "id": "0.47511865767503303"
+  },
+  {
+    "houseName": "abhishek,s home",
+    "price": "2000",
+    "location": "AUS",
+    "ratting": "3",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStDL7b-XHh_x6wS1M6fZkdHAkyIw6OLtKiDQ&s",
+    "id": "0.14030401889707056"
+  }
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= house.houseName %> - Details</title>
+  <link rel="stylesheet" href="/output.css" />
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Header (Optional Include) -->
+  <%- include('../partials/head') %>
+
+  <!-- Main Container -->
+  <main class="flex-grow container mx-auto px-4 py-8 ">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row">
+      <!-- Image Section -->
+      <div class="lg:w-1/2 w-full">
+        <img src="<%= house.image %>" alt="<%= house.houseName %>" class="object-cover h-full w-full">
+      </div>
+
+      <!-- Content Section -->
+      <div class="lg:w-1/2 w-full p-8">
+        <h1 class="text-3xl font-bold mb-4"><%= house.houseName %></h1>
+        <p class="text-lg mb-2"><span class="font-semibold">Location:</span> <%= house.location %></p>
+        <p class="text-lg mb-2"><span class="font-semibold">Price:</span> $<%= house.price %></p>
+        <p class="text-lg mb-2"><span class="font-semibold">Rating:</span> <%= house.ratting %> ⭐</p>
+
+        <!-- Back Button -->
+        <a href="/" class="inline-block mt-6 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition mr-4">
+          ⬅ Back to Home
+        </a>
+
+        <%- include("../partials/favorite") %>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <!-- Footer (Optional) -->
+  <footer class="text-center py-4 text-gray-500">
+    &copy; <%= new Date().getFullYear() %> airbnb
+  </footer>
+
+</body>
+</html>

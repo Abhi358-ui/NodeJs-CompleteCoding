@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Listings</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen font-sans">
+    <%- include('../partials/head') %>
+
+    <!-- Header + Add Home Button -->
+    <div class="flex items-center justify-between px-8 py-6 bg-white shadow-sm">
+      <h1 class="text-2xl font-bold text-indigo-700">🏠 Favourite homes</h1>
+    </div>
+
+    <!-- Registered Homes Grid -->
+    <div class="p-6">
+    
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12"
+      >
+        <% registerHome.forEach(home => { %>
+        <div
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+        >
+          <img
+            class="w-full h-48 object-cover"
+            src="<%= home.image %>"
+            alt="<%= home.houseName %>"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-indigo-800 mb-1">
+              <%= home.houseName %>
+            </h3>
+            <p class="text-sm text-gray-600 mb-1">📍 <%= home.location %></p>
+            <p class="text-sm text-gray-700 mb-1">💰 ₹<%= home.price %></p>
+            <p class="text-sm text-yellow-500">⭐ <%= home.ratting %> / 5</p>
+            <div class="m-2">
+             <%- include("../partials/favorite",{house:home}) %>
+              <a class="bg-indigo-500 text-white px-3 py-2 ml-2 rounded-sm" href="/homes/<%= home.id %>">Details</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>
